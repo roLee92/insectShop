@@ -49,9 +49,8 @@ Licence URI: http://www.os-templates.com/template-terms
       <ul class="slides">
         <li>
           <article>
-            <p class="heading">Cum sociis natoque penatibus</p>
-            <h2 class="heading">Tincidunt nec venenatis etiam tellus</h2>
-            <p>Et magnis dis montes ridiculus mus sed mi eros molestie eget mauris</p>
+            <h2 class="heading">Welcome to Insect World!</h2>
+            <p>The online insect catalog</p>
             <footer>
               <ul class="nospace inline pushright">
                 <li><a class="btn" href="#">Parturient</a></li>
