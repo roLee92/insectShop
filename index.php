@@ -16,7 +16,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <html>
 <head>
-<title>Overerts</title>
+<title>Insect Catalog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -32,7 +32,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="index.html">Overerts</a></h1>
+        <h1><a href="index.html">Insect World</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
         <?php include('menu.php'); ?>
@@ -51,38 +51,18 @@ Licence URI: http://www.os-templates.com/template-terms
           <article>
             <h2 class="heading">Welcome to Insect World!</h2>
             <p>The online insect catalog</p>
-            <footer>
-              <ul class="nospace inline pushright">
-                <li><a class="btn" href="#">Parturient</a></li>
-                <li><a class="btn inverse" href="#">Nascetur</a></li>
-              </ul>
-            </footer>
           </article>
         </li>
         <li>
           <article>
-            <p class="heading">Urna gravida eget consequat</p>
-            <h2 class="heading">Rhoncus pharetra ligula vestibulum</h2>
-            <p>Sed varius dui eget convallis nibh lectus ultricies lacus ac auctor lacus</p>
-            <footer>
-              <ul class="nospace inline pushright">
-                <li><a class="btn" href="#">Consequat</a></li>
-                <li><a class="btn inverse" href="#">Phasellus</a></li>
-              </ul>
-            </footer>
+            <h2 class="heading">Check Out Our Catalog!</h2>
+            <p>There are numerous insects to look up!</p>
           </article>
         </li>
         <li>
           <article>
-            <p class="heading">Porta congue lacus eleifend</p>
-            <h2 class="heading">Efficitur porta quisque nisl odio suscipit</h2>
-            <p>Ante et velit in elit sapien vulputate non mattis ut euismod sed nisi</p>
-            <footer>
-              <ul class="nospace inline pushright">
-                <li><a class="btn" href="#">Accumsan</a></li>
-                <li><a class="btn inverse" href="#">Molestie</a></li>
-              </ul>
-            </footer>
+            <h2 class="heading">You can also add insects to the catalog!!!</h2>
+            <p>What he said ^</p>
           </article>
         </li>
       </ul>
@@ -101,53 +81,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
   <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="one_third first">
-      <h6 class="heading">est ut dolor tristique</h6>
-      <p>maecenas tempus vestibulum felis in efficitur sed facilisis urna metus interdum pretium mi dignissim et fusce.</p>
-      <p class="btmspace-15">sagittis tempor nullam iaculis dolor id condimentum cursus duis scelerisque ac metus amet laoreet vestibulum dictum.</p>
-      <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
-      </ul>
-    </div>
-    <div class="one_third">
-      <h6 class="heading">luctus vestibulum magna</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-          Street Name &amp; Number, Town, Postcode/Zip
-          </address>
-        </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-      </ul>
-    </div>
-    <div class="one_third">
-      <h6 class="heading">velit porttitor ac euismod</h6>
-      <ul class="nospace linklist">
-        <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">ut porttitor sit amet</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            <p class="nospace">nunc sed eget augue varius dapibus mi eget lobortis risus nunc a leo&hellip;</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">finibus commodo ex eu</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
-            <p class="nospace">pharetra nam sit amet lacus tempor ipsum finibus luctus sed fringilla&hellip;</p>
-          </article>
-        </li>
-      </ul>
-    </div>
-    <!-- ################################################################################################ -->
+    <?php include('footer.php'); ?>
   </footer>
 </div>
 <!-- ################################################################################################ -->
