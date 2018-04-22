@@ -3,17 +3,37 @@
 // Create and include a configuration file with the database connection
 include('config.php');
 
-// Include functions for application
+// Include functions
 include('functions.php');
 
-// Get search term from URL using the get function
-$term = get('search-term');
+// Get the insect insectid from the url
+$insectid = get('insectid');
 
-// Get a list of insects using the searchinsects function
-// Print the results of search results
-// Add a link printed for each insect to insect.php with an passing the isbn
-// Add a link printed for each insect to form.php with an action of edit and passing the isbn
-$insects = searchInsects($term, $database);
+// Get a list of insects from the database with the insectid passed in the URL
+$sql = file_get_contents('sql/getInsect.sql');
+$params = array(
+	'insectid' => $insectid
+);
+$statement = $database->prepare($sql);
+$statement->execute($params);
+$insects = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+// Set $insect equal to the first insect in $insects
+$insect = $insects[0];
+
+// Get categories of insect from the database
+$sql = file_get_contents('sql/getInsectCategories.sql');
+$params = array(
+	'insectid' => $insectid
+);
+$statement = $database->prepare($sql);
+$statement->execute($params);
+$categories = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+/* In the HTML:
+	- Print the insect title, author, price
+	- List the categories associated with this insect
+*/
 ?>
 
     <!DOCTYPE html>
@@ -30,11 +50,11 @@ $insects = searchInsects($term, $database);
 
     <body id="top">
 
-        
-        
-        
-        
-        
+
+
+
+
+
         <!-- Top Background Image Wrapper -->
         <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
 
@@ -59,47 +79,48 @@ $insects = searchInsects($term, $database);
 
         </div>
 
-        
-        
-        
+
+
+
 
 
         <div class="page">
-            <h1>Mantids and more!</h1>
-            <form method="GET" class="search">
-                <input type="text" name="search-term" placeholder="Search..." class="searchinput"/>
-                <input type="submit" class="btnsearch" />
-            </form>
-            <br>
-            <hr>
-            <br>
-            <br>
-            <p>
-                Hey there <strong><?php echo $customer01->customerName; ?>!</strong>
-            </p>
-            <br>
-            <?php foreach($insects as $insect) : ?>
+            <h1>
+                <?php echo $insect['name'] ?>
+            </h1>
             <img src="img/<?php echo $insect['src'];?>" style="width: 300px;" />
             <p>
-                <?php echo $insect['name']; ?><br />
-                <strong>$<?php echo $insect['price']; ?></strong> <br />
-                <a href="form.php?action=edit&insectid=<?php echo $insect['insectid'] ?>">Edit Insect</a><br />
-                <a href="insect.php?insectid=<?php echo $insect['insectid'] ?>">View Insect</a>
+                <?php echo $insect['genus']; ?><br />
+                <?php echo $insect['species']; ?><br />
+                <?php echo $insect['price']; ?><br />
             </p>
-            <?php endforeach; ?> 
+
+            <ul>
+                <?php foreach($categories as $category) : ?>
+                <li>
+                    <?php echo $category['name'] ?>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+
             <br>
-            <hr>
-            <br>
-            <strong><p><a href="form.php?action=add"><i class="fa fa-plus" aria-hidden="false"></i> Add an Insect</a></p></strong>
+            <a href="index.php">Go Back</a>
+
         </div>
+
+
+
+
+
+
         <?php include('footer.php'); ?>
 
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
         <!-- JAVASCRIPTS -->
         <script src="layout/scripts/jquery.min.js"></script>

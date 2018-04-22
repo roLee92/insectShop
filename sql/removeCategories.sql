@@ -1,2 +1,2 @@
-DELETE FROM book_categories
-WHERE isbn = :isbn
+DELETE FROM insect_categories
+WHERE insectid = :insectid

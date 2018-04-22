@@ -1,3 +1,3 @@
 SELECT * 
-FROM books 
+FROM insect 
 WHERE price <= :maximum_price

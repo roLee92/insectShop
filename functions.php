@@ -1,16 +1,16 @@
 <?php
 
-function searchBooks($term, $database) {
-	// Get list of books
+function searchInsects($term, $database) {
+	// Get list of insects
 	$term = $term . '%';
-	$sql = file_get_contents('sql/getBooks.sql');
+	$sql = file_get_contents('sql/getInsects.sql');
 	$params = array(
 		'term' => $term
 	);
 	$statement = $database->prepare($sql);
 	$statement->execute($params);
-	$books = $statement->fetchAll(PDO::FETCH_ASSOC);
-	return $books;
+	$insects = $statement->fetchAll(PDO::FETCH_ASSOC);
+	return $insects;
 }
 
 /*

@@ -1,10 +1,10 @@
 <?php
 
 // Connecting to the MySQL database
-$username = 'leer1';
-$password = 'ne7tEchA';
+$username = 'root';
+$password = 'root';
 
-$database = new PDO('mysql:host=localhost;dbname=db_spring18_leer1', $username, $password);
+$database = new PDO('mysql:host=localhost;dbname=test', $username, $password);
 function my_autoLoader($class) {
     include 'classes/class.' . $class . ".php";
 }
