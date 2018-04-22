@@ -486,15 +486,16 @@ p a:hover{
 .btnsearch{
     color: #000;
 }
-.searchinput{
+.search input{
     padding: 5px 0 5px 0;
     margin: 10px 0 10px 0;
-    color: #000;
+    color: #fff;
+    background: #363636;
     border: none;
     border-bottom: 1px solid #00e52a;
 }
 .search input:focus{
-    background: #000;
+    background: #242424;
     color: #fff;
     border-bottom: 3px solid #00e52a;
 }
